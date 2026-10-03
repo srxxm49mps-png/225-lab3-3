@@ -50,7 +50,7 @@ pipeline {
                     // This updates the deployment-dev.yaml to use the new image tag
                     sh "sed -i 's|${DOCKER_IMAGE}:latest|${DOCKER_IMAGE}:${IMAGE_TAG}|' deployment-dev.yaml"
                     sh "kubectl apply -f deployment-dev.yaml"
-                    sh "kubectl rollout status deployment/minterjt-ingress-dev --timeout=180s"
+                    sh "kubectl rollout status deployment/minterjt-lab33-dev --timeout=180s"
                 }
             }
         }
